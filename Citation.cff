@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the accompanying paper."
+title: "SWMM-Agentic-Calibration: Multi-agent LLM-based calibration of urban drainage models"
+version: 1.0.0
+date-released: 2026-10-19
+license: MIT
+repository-code: "https://github.com/katharinaTe/SWMM-Agentic-Calibration"
+authors:
+  - family-names: Teuber
+    given-names: Katharina
+    affiliation: "Jade University of Applied Sciences, Oldenburg, Germany"
+keywords:
+  - SWMM
+  - urban drainage
+  - model calibration
+  - large language models
+  - multi-agent systems
+  - SPOTPY
+preferred-citation:
+  type: article
+  title: "Call my Agents - Multi-Agent LLM-Based Calibration of Urban Drainage Models: Performance and Reliability Across Model Scales"
+  authors:
+    - family-names: Teuber
+      given-names: Katharina
+      affiliation: "Jade University of Applied Sciences, Oldenburg, Germany"
+  journal: "Water Science and Technology"
+  year: 2026
+  status: in-press
+references:
+  - type: software
+    title: "swmm_api"
+    authors:
+      - family-names: Pichler
+        given-names: Markus
+    url: "https://gitlab.com/markuspichler/swmm_api"
+    license: MIT
