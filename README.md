@@ -62,7 +62,7 @@ ollama pull gpt-oss:20b
 
 If you use this code, please cite the accompanying paper:
 
-> Teuber, K. (2026). *[Title of the paper]*. *[Journal]*, in press.
+> Teuber, K. (2026). Call my Agents - Multi-Agent LLM-Based Calibration of Urban Drainage Models: Performance and Reliability Across Model Scales. Water Science & Technology, in press.
 
 The version of the code used in the paper is archived on Zenodo: [DOI follows].
 
