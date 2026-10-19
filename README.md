@@ -1,4 +1,5 @@
 # SWMM-Agentic-Calibration
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23478513.svg)](https://doi.org/10.5281/zenodo.23478513)
 
 **Multi-agent LLM-based calibration of urban drainage models with EPA-SWMM, SPOTPY and locally hosted LLMs**
 
@@ -95,7 +96,7 @@ An overview of all runs is saved as `all_run_summaries.csv` / `.json`.
 
 ## Citation
 
-If you use this code, please cite the paper above. The version of the code used in the paper is archived on Zenodo: *DOI follows*.
+If you use this code, please cite the paper above. The version of the code used in the paper (v1.0.0) is archived on Zenodo: https://doi.org/10.5281/zenodo.23478514 (all versions: https://doi.org/10.5281/zenodo.23478513).
 
 ## License
 
