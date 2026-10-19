@@ -19,9 +19,6 @@ This repository contains the code accompanying the paper listed under [Citation]
 | Calibration agent | `run_spotpy_calibration` |
 | Analysis agent | `analyze_calibration_results` |
 
-
-## Authors
-This code has been created by Katharina Teuber at Jade Hochschule (University of Applied Sciences)
 ## Repository structure
 .
 
