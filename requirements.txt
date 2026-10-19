@@ -1,0 +1,12 @@
+# Python >= 3.10, Linux or macOS (the notebooks use the Unix-only module `resource`)
+numpy
+pandas
+matplotlib
+spotpy
+swmm-api
+langchain
+langchain-core
+langchain-ollama
+langgraph
+langgraph-supervisor
+jupyter
