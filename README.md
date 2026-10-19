@@ -1,5 +1,5 @@
-# multi_agent_llm_udm_calibration
-multi_agent_llm_udm_calibration
+# SWMM-Agentic-Calibration
+SWMM-Agentic-Calibration
 
 # Agent-Based Calibration of Urban Drainage Models Using SWMM and LLMs
 ## Overview
