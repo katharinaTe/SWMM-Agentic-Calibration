@@ -46,13 +46,6 @@ langchain-ollama
 
 A working SWMM installation is also required.
 
-### License
-This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License (CC BY-NC 4.0).
-
-You are free to use, share, and adapt this material for non-commercial purposes, provided that appropriate credit is given.
-
-For commercial use, please contact the author.
-
 ### Citation
 ** work in progress **, for appropriate citation, please contact the author.
 
