@@ -25,7 +25,8 @@ preferred-citation:
       affiliation: "Jade University of Applied Sciences, Oldenburg, Germany"
   journal: "Water Science and Technology"
   year: 2026
-  status: in-press
+  doi: "10.2166/wst.2026.365"
+  url: "https://doi.org/10.2166/wst.2026.365"
 references:
   - type: software
     title: "swmm_api"
