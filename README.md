@@ -5,7 +5,7 @@
 
 This repository contains the code accompanying the paper
 
-> Teuber, K. (2026). Call my Agents – Multi-Agent LLM-Based Calibration of Urban Drainage Models: Performance and Reliability Across Model Scales. *Water Science & Technology*, in press.
+> Teuber, K. (2026). Call my Agents – Multi-Agent LLM-Based Calibration of Urban Drainage Models: Performance and Reliability Across Model Scales. *Water Science & Technology*, wst2026365. https://doi.org/10.2166/wst.2026.365
 
 A supervisor agent receives a calibration task in natural language and coordinates three specialised agents that prepare the SWMM model and observation data, run an SCE-UA calibration with SPOTPY and analyse calibration quality and parameter uncertainty (GLUE). All LLMs run locally via Ollama.
 
@@ -21,18 +21,20 @@ A supervisor agent receives a calibration task in natural language and coordinat
 
 Calibration objectives: Nash–Sutcliffe efficiency (NSE) or combined event score (NSE, volume error and peak error, scaled 1–5, after Henrichs 2015).
 
-## Notebooks
+## Repository structure
 
-Each notebook is self-contained and corresponds to one experiment in the paper.
+```
+├── swmm_agentic/
+│   ├── common.py                      # imports, SWMM executable, LLM, printing helpers
+│   ├── detention_pond_nse.py          # detention pond, NSE
+│   ├── detention_pond_event_score.py  # detention pond, event score
+│   ├── bellinge_nse.py                # Bellinge, NSE
+│   └── bellinge_event_score.py        # Bellinge, event score
+└── experiments/                       # one script per experiment of the paper
+```
 
-| Notebook | Case study | Objective | Setting | Runs | Paper |
-|---|---|---|---|---|---|
-| `dp_nse_controlled_gpt.ipynb` | Detention pond | NSE | controlled | 10 | Tables 1, 2 |
-| `dp_es_controlled_gpt.ipynb` | Detention pond | event score | controlled | 10 | Tables 1, 2 |
-| `dp_nse_stochastic_gpt.ipynb` | Detention pond | NSE | stochastic | 10 | text only (not shown) |
-| `dp_es_stochastic_gpt.ipynb` | Detention pond | event score | stochastic | 10 | Figure 8 |
-| `Bel_NSE.ipynb` | Bellinge | NSE | – | 3 | Table 3, Figure 9 |
-| `Bel_event_score.ipynb` | Bellinge | event score | – | 3 | Table 3, Figure 9 |
+Each module in `swmm_agentic/` contains the state, SWMM functions, SPOTPY setup, agent tools, agents and run loop (`run_experiment()`) of one case study and objective. The code is taken unchanged from the notebooks of v1.0.0; only the cell boundaries were removed and the main cell became the function `run_experiment()`.
+
 
 **Experimental settings**
 
@@ -60,7 +62,7 @@ Package versions are not pinned. The LangChain/LangGraph APIs change frequently;
 
 ## Input data
 
-The input files are not included in this repository and must be placed in the working directory of the notebooks.
+The input files are not included in this repository and must be placed in the directory from which the experiments are started (e.g. the repository root).
 
 **Detention pond.** `Detention_Pond_Model.inp` from the example models distributed with EPA SWMM 5.2.
 
@@ -74,9 +76,13 @@ Observed water levels are converted from cm to m, resampled to 1-min intervals a
 
 ## Usage
 
-1. Set the path to the SWMM executable in the cell that defines `CONFIG["exe_path"]`.
+1. Set the path to the SWMM executable in the cell that defines `CONFIG["exe_path"]` in `swmm_agentic/common.py`.
 2. Make sure Ollama is running and the input files are in the working directory.
-3. Run all cells of the notebook.
+3. Start an experiment from the repository root, e.g.
+
+```bash
+python -m experiments.dp_es_controlled
+```
 
 Results are written per run to `multi_run_outputs_<mode>/run_XX/` (detention pond) or `multi_run_outputs/run_XX/` (Bellinge):
 
